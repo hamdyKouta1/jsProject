@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    font-family: monospace;
+
+}
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #025464;
+}
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background-color: #E57C23;
+    padding: 40px 60px;
+}
+.info{
+    position: relative;
+    display: flex;
+    flex-direction: warp;
+    justify-content: center;
+    align-items: center;
+    gap: 120px;
+}
+h2{
+    font-size: 3em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+.count{
+    color: #FF6868;
+    padding: 20px 10px;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    font-weight: 1000;
+    border-radius: 40% 0%;
+
+}
+.win{
+    padding:30px 30px;
+    color: #fff;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    font-weight: 1000;
+    border-radius:  0% 25%;
+
+}
+.hidden {
+    display: none;
+}
+.timer{
+    padding:20px 10px;
+    color: #9ADE7B;
+    font-size: 1.5em;
+    letter-spacing: -0.05em;
+    font-weight: 1000;
+    border-radius:  0% 40%;
+}
+.addBackground{
+    background-color: #025464;  
+    border: 2px solid #fff;
+   
+}
+.reset{
+    padding: 15px 20px;
+    color: #3C486B;
+    border: none;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+
+.reset:focus{
+    color:#fff;
+    background-color: #3C486B;
+}
+.game{
+    width: 440px ;
+    max-height: 440px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    transform-style: preserve-3d;
+    perspective: 500px;
+}
+.item{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3em;
+    background-color: #fff;
+    transition: 0.3s;
+    transform: rotateY(180deg);
+    cursor:pointer;
+
+}
+.item.boxOpen{
+    transform: rotateY(0deg);
+    pointer-events: none;
+ 
+
+
+}
+
+.item.boxMatch{
+    pointer-events: none;
+    background-color: gainsboro;
+
+}
+.item::after{
+    content: ' ';
+    position: absolute;
+    inset: 0;
+    background-color: #E8AA42;
+    transition: 0.3s;
+    transform: rotateY(0deg);
+    backface-visibility: hidden;
+   
+    background-image: url(img/joker.png);
+    background-position: 50% 50%;
+    background-size: 1.7em;
+    background-repeat: no-repeat;
+
+
+}
+
+.boxOpen:after,.boxMatch:after{
+    transform: rotateY(180deg);
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
